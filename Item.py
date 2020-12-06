@@ -28,11 +28,12 @@ class Item(Inventory):
         
 # if __name__ == "__main__":
 
-#     fixed_items = Item(333, 30, {"key": 24}, {"it": 411})
-#     print(fixed_items._value)
-#     print(fixed_items.item_Slot)
-#     fixed_items.all_Items()
-#     print(fixed_items.available_Item)
-#     fixed_items.item_Position()
-#     print(fixed_items.keyItem3)
+    # fixed_items = Item(333, 30, {"key": 24}, {"it": 411})
+    # print(fixed_items._value)
+    # print(fixed_items.item_Slot)
+    # fixed_items.all_Items()
+    # fixed_items.check_Item(fixed_items)
+    # print(fixed_items.available_Item)
+    # fixed_items.item_Position()
+    # print(fixed_items.keyItem3)
     

@@ -9,7 +9,7 @@ class Inventory:
     def inventory_Item(self, item, quality):
         self.item_Slot[item] = quality
 
-    def check_Item(self):
+    def check_Item(self,slot):
         slot = self.item_Slot.items()
         for i,j in slot:
             print(f"Item: {i}, PowerLevel: {j}.")
@@ -18,8 +18,7 @@ class Inventory:
 #     bag = Inventory(999, 100, {"pouch":100})
 
 #     print(bag._Inventory__itemId)
-#     bag.inventory_Item("bag",10)
-#     bag.inventory_Item("satchel",1)
-#     print(bag.item_Slot)
-#     bag.check_Item()
-
+    # bag.inventory_Item("bag",10)
+    # bag.inventory_Item("satchel",1)
+    # print(bag.item_Slot)
+    # bag.check_Item(bag.inventory_Item)
