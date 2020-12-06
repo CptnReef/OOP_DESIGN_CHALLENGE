@@ -5,9 +5,6 @@ class Inventory:
         self.__itemId = randint(100, itemId)
         self._value = value
         self.item_Slot = dict(item_Slot)
-
-    def select_Item(self):
-        pass
     
     def inventory_Item(self, item, quality):
         self.item_Slot[item] = quality
