@@ -1,24 +1,25 @@
 from random import randint
 
 class Inventory:
-    def __init__(self, itemId, value, item_Slot):
-        self.__itemId = randint(100, itemId)
-        self._value = value
-        self.item_Slot = dict(item_Slot)
+    def __init__(self, inventory_Id, inventory_value, inventory_Slot):
+        self.__inventory_Id = randint(100, inventory_Id)
+        self._value = inventory_value
+        self.inventory_Slot = dict(inventory_Slot)
     
-    def inventory_Item(self, item, quality):
-        self.item_Slot[item] = quality
+    def inventory_Item(self, pack, item):
+        self.inventory_Slot[pack] = item
 
-    def check_Item(self,slot):
-        slot = self.item_Slot.items()
-        for i,j in slot:
-            print(f"Item: {i}, PowerLevel: {j}.")
+    def check_Inventory(self,slot):
+        slot = self.inventory_Slot
+        for i,j in slot.items():
+            print(f"Item: {i}, Quality: {j}.")
+        return slot
     
 # if __name__ == "__main__":
-#     bag = Inventory(999, 100, {"pouch":100})
+#     bag = Inventory(999, 101, {"pouch":99})
 
-#     print(bag._Inventory__itemId)
-    # bag.inventory_Item("bag",10)
-    # bag.inventory_Item("satchel",1)
-    # print(bag.item_Slot)
-    # bag.check_Item(bag.inventory_Item)
+#     print(bag._Inventory__inventory_Id)
+#     bag.inventory_Item("bag",21)
+#     bag.inventory_Item("satchel",18)
+#     print(bag.inventory_Slot)
+#     bag.check_Inventory(bag.inventory_Item)
