@@ -3,7 +3,14 @@ class Obstacle:
         self.move = move
         self.interact = interact
     
-    def colliding(self):
+    def board(self):
+        x = 15
+        y = 15
+        self.grid = (x,y)
+
+    def object(self):
         pass
         
+    def colliding(self):
+        pass
         

@@ -2,11 +2,11 @@ from Inventory import Inventory
 
 class Item(Inventory):
     def __init__(self, inventory_Id, inventory_value, inventory_Slot, available_Item):
-        super().__init__(inventory_Id, inventory_value, inventory_Slot)
+        Inventory.__init__(self, inventory_Id, inventory_value, inventory_Slot)
         self.available_Item = available_Item
 
     def inventory_Item(self, pack, item):
-        super().inventory_Item( pack, item) 
+        Inventory.inventory_Item(self, pack, item) 
         self.available_Item = {"Bunny Slippers":10, "Nerf-Gun":100, "McMuffin":1000}
         self.inventory_Slot = self.available_Item
         return self.check_Inventory(self.available_Item)
@@ -21,15 +21,13 @@ class Item(Inventory):
         for i,j in pos.items():
             print(f"{i} Coordinates: {j}")
         print("____________________________________________________")
-
         
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    set_items = Item(333, 30, {"item_Slot":100}, {"available_Slot":100})
-    # print(set_items._Inventory__inventory_Id)
-    # print(set_items._value)
-    # print(set_items.available_Item)
-    # print(set_items.inventory_Slot)
-    # print(set_items.inventory_Item("overrided",220))
-    set_items.fixed_Position()
+#     set_items = Item(333, 30, {"item_Slot":100}, {"available_Slot":100})
+#     print(set_items._value)
+#     print(set_items.available_Item)
+#     print(set_items.inventory_Slot)
+#     print(set_items.inventory_Item("overrided",220))
+#     set_items.fixed_Position()
     
