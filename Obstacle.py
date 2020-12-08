@@ -5,7 +5,6 @@ class Obstacle:
         self.y = 1
                 
     def player_Move(self):
-
         self.start = input("Ready? [Yes/No]")
         self.start = self.start.lower()
         print(f"{self.start}\n")
@@ -58,5 +57,12 @@ class Obstacle:
                 elif self.x < int(1) or self.x >= int(15):
                     print(f"oof!({self.x},{self.y})")
                     break
+
+                if int(10) in self.carry.values():
+                    if int(100) in self.carry.values():
+                        if int(1000) in self.carry.values():
+                            print("You win!")
+                            break
+                
         else:
             print("Bye.")
