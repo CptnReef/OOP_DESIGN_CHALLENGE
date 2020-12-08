@@ -7,8 +7,6 @@ class Player(Item, Obstacle):
         Item.__init__(self, inventory_Id, inventory_value, inventory_Slot, available_Item)
         Obstacle.__init__(self, carry)
         self.check_Inventory(self.carry)
-        self.name = input("Enter Name:\n")
-        self.name = self.name.lower()
         
     def inventory_Item(self, pack, item):
         Item.inventory_Item(self, pack, item)
@@ -17,17 +15,16 @@ class Player(Item, Obstacle):
         Item.fixed_Position(self)
 
     def player_Move(self):
-        self.name
         self.inventory_Item("",1)
         print(" [W]up [S]down [A]left [D]right [I]check_items [Q]search_items")
         Obstacle.player_Move(self)
         
-if __name__ == "__main__":
-    bob = Player(333, 30, {"another_Slot":100}, {"available_Slot":100}, 1,1,"","","",{})
+# if __name__ == "__main__":
+#     bob = Player(333, 30, {"another_Slot":100}, {"available_Slot":100}, 1,1,"","","",{})
     # print(bob._value)
     # print(bob.inventory_Slot)
     # print(bob.available_Item)
     # bob.inventory_Item("",1)
     # bob.fixed_Position()
     # bob.player_Move()
-    bob.player_Move()
+    # bob.player_Move()
