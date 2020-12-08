@@ -1,8 +1,14 @@
 from Player import Player
 
-def got_It():
-    gotIt = input("got it?")
+def menu_Screen():
+    gotIt = input("\nenter to continue\n")
     return gotIt
 
-Game = Player(999,100,{},{},1,1,"","","",{})
-got_It()
+game = Player(999,100,{},{},1,1,"","","",{})
+menu_Screen()
+
+game.fixed_Position()
+menu_Screen()
+
+game.player_Move()
+

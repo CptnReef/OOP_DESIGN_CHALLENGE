@@ -13,10 +13,10 @@ class Player(Item, Obstacle):
 
     def fixed_Position(self):
         Item.fixed_Position(self)
+        print("please keep this in mind")
 
     def player_Move(self):
-        self.inventory_Item("",1)
-        print(" [W]up [S]down [A]left [D]right [I]check_items [Q]search_items")
+        print("\n[W]up [S]down [A]left [D]right [I]check_items [Q]search_items\n")
         Obstacle.player_Move(self)
         
 # if __name__ == "__main__":
@@ -26,5 +26,4 @@ class Player(Item, Obstacle):
     # print(bob.available_Item)
     # bob.inventory_Item("",1)
     # bob.fixed_Position()
-    # bob.player_Move()
     # bob.player_Move()
